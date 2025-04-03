@@ -5,11 +5,11 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Копіюємо лише необхідні файли (наприклад, app.py і requirements.txt)
-COPY app.py /app/
+
 COPY requirements.txt /app/
 
 # Встановлюємо залежності
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Вказуємо порт, на якому буде працювати Flask
 EXPOSE 5000
